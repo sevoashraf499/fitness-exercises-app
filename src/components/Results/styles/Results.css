@@ -1,0 +1,104 @@
+.resultsContainer {
+  width: 85%;
+  height: 47.5rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.resultsContainer .searchItem {
+  width: 22%;
+  height: 22rem;
+  text-align: center;
+  border-top: 5px solid hsl(44deg, 100%, 76%);
+  border-radius: 0.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: white;
+}
+.resultsContainer .searchItem img {
+  width: 70%;
+  height: 60%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.resultsContainer .searchItem .buttonsContainer {
+  display: flex;
+  gap: 10%;
+}
+.resultsContainer .searchItem .buttonsContainer button {
+  width: 6rem;
+  height: 2rem;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.resultsContainer .searchItem .buttonsContainer button:nth-child(1) {
+  background-color: hsl(0deg, 100%, 83%);
+}
+.resultsContainer .searchItem .buttonsContainer button:nth-child(2) {
+  background-color: hsl(44deg, 100%, 76%);
+}
+.resultsContainer .searchItem .buttonsContainer button:hover {
+  opacity: 0.8;
+}
+.resultsContainer .searchItem:hover {
+  transform: scale(1.1);
+}
+
+.resultsContainer::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.resultsContainer::-webkit-scrollbar-track {
+  background: hsl(348deg, 100%, 99%); /* color of the tracking area */
+}
+
+.resultsContainer::-webkit-scrollbar-thumb {
+  height: 4rem;
+  background-color: hsl(0deg, 100%, 83%); /* color of the scroll thumb */
+  border: 0.3rem solid hsl(348deg, 100%, 99%); /* creates padding around scroll thumb */
+  border-radius: 1.25rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.resultsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0deg, 100%, 90%);
+}
+
+@media only screen and (max-width: 1180px) {
+  .resultsContainer .searchItem {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 935px) {
+  .resultsContainer .searchItem {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .resultsContainer {
+    width: 70%;
+  }
+  .resultsContainer .searchItem {
+    width: 90%;
+  }
+}/*# sourceMappingURL=Results.css.map */

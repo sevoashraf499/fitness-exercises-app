@@ -1,0 +1,101 @@
+@mixin flexBox($flex, $flexFlow, $justifyContent, $alignItems) {
+  display: $flex;
+  flex-flow: $flexFlow;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+#home {
+  width: 93%;
+  height: calc(100vh - 6rem);
+  overflow: hidden;
+
+  position: absolute;
+  left: 3.5%;
+
+  @include flexBox(flex, row nowrap, space-between, center);
+
+  .textContainer {
+    height: 17rem;
+    position: relative;
+
+    @include flexBox(flex, column nowrap, space-around, none);
+
+    h2 {
+      color: hsl(0, 100%, 57%);
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    a {
+      width: 10rem;
+      height: 2.5rem;
+      color: white;
+      text-decoration: none;
+      background-color: hsl(0, 100%, 57%);
+      font-size: 1.06rem;
+      border: none;
+      outline: none;
+      border-radius: 0.3rem;
+      user-select: none;
+      transition: 0.3s;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a:hover {
+      transform: scale(0.95);
+    }
+    .backgroundText {
+      color: hsl(0, 100%, 57%);
+      font-size: 12.5rem;
+      opacity: 0.1;
+      z-index: -1;
+      user-select: none;
+
+      position: absolute;
+      top: 18rem;
+      left: 0;
+    }
+  }
+
+  img {
+    height: 100%;
+    user-select: none;
+  }
+}
+
+@media only screen and(max-width: 900px) {
+  #home {
+    width: 100%;
+    left: 0;
+    padding: 1.25rem;
+    box-sizing: border-box;
+
+    background-image: url("../../../assets/images/banner-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .textContainer {
+      h1 {
+        color: hsl(0, 0%, 0%);
+      }
+      p {
+        color: white;
+      }
+      button {
+        width: 8rem;
+        font-size: 14px;
+      }
+      .backgroundText {
+        display: none;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

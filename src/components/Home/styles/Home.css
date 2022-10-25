@@ -1,0 +1,96 @@
+#home {
+  width: 93%;
+  height: calc(100vh - 6rem);
+  overflow: hidden;
+  position: absolute;
+  left: 3.5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#home .textContainer {
+  height: 17rem;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: none;
+}
+#home .textContainer h2 {
+  color: hsl(0deg, 100%, 57%);
+}
+#home .textContainer h1 {
+  font-size: 2.5rem;
+}
+#home .textContainer a {
+  width: 10rem;
+  height: 2.5rem;
+  color: white;
+  text-decoration: none;
+  background-color: hsl(0deg, 100%, 57%);
+  font-size: 1.06rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .textContainer a:hover {
+  transform: scale(0.95);
+}
+#home .textContainer .backgroundText {
+  color: hsl(0deg, 100%, 57%);
+  font-size: 12.5rem;
+  opacity: 0.1;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 18rem;
+  left: 0;
+}
+#home img {
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #home {
+    width: 100%;
+    left: 0;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    background-image: url("../../../assets/images/banner-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #home .textContainer h1 {
+    color: hsl(0deg, 0%, 0%);
+  }
+  #home .textContainer p {
+    color: white;
+  }
+  #home .textContainer button {
+    width: 8rem;
+    font-size: 14px;
+  }
+  #home .textContainer .backgroundText {
+    display: none;
+  }
+  #home img {
+    display: none;
+  }
+}/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,110 @@
+.resultsContainer {
+  width: 85%;
+  height: 47.5rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+
+  .searchItem {
+    width: 22%;
+    height: 22rem;
+    text-align: center;
+    border-top: 5px solid hsl(44, 100%, 76%);
+    border-radius: 0.4rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    background-color: white;
+
+    img {
+      width: 70%;
+      height: 60%;
+      user-select: none;
+    }
+    .buttonsContainer {
+      display: flex;
+      gap: 10%;
+
+      button {
+        width: 6rem;
+        height: 2rem;
+        color: white;
+        font-size: 0.9rem;
+        border: none;
+        outline: none;
+        user-select: none;
+        border-radius: 1rem;
+        font-size: 0.7rem;
+        // box-shadow: 0.1rem 0.1rem 0.5rem hsl(0, 2%, 82%);
+        cursor: pointer;
+      }
+      button:nth-child(1) {
+        background-color: hsl(0, 100%, 83%);
+      }
+      button:nth-child(2) {
+        background-color: hsl(44, 100%, 76%);
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .searchItem:hover {
+    transform: scale(1.1);
+  }
+}
+
+.resultsContainer::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.resultsContainer::-webkit-scrollbar-track {
+  background: hsl(348, 100%, 99%); /* color of the tracking area */
+}
+
+.resultsContainer::-webkit-scrollbar-thumb {
+  height: 4rem;
+  background-color: hsl(0, 100%, 83%); /* color of the scroll thumb */
+  border: 0.3rem solid hsl(348, 100%, 99%); /* creates padding around scroll thumb */
+  border-radius: 1.25rem;
+  cursor: grab;
+}
+
+.resultsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 100%, 90%);
+}
+
+@media only screen and(max-width: 1180px) {
+  .resultsContainer {
+    .searchItem {
+      width: 30%;
+    }
+  }
+}
+
+@media only screen and(max-width: 935px) {
+  .resultsContainer {
+    .searchItem {
+      width: 45%;
+    }
+  }
+}
+
+@media only screen and(max-width: 700px) {
+  .resultsContainer {
+    width: 70%;
+
+    .searchItem {
+      width: 90%;
+    }
+  }
+}

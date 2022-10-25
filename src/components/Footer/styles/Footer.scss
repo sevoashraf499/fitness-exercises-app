@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  height: 7rem;
+  background-color: #ffe4e5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  top: 178%;
+}

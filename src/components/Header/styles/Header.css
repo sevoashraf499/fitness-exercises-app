@@ -1,0 +1,73 @@
+header {
+  width: 100%;
+  height: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header .container {
+  width: 95%;
+  height: 5rem;
+  position: absolute;
+  left: 2.3%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container img {
+  min-width: 10rem;
+  height: 3rem;
+}
+header .container nav {
+  width: 18rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: none;
+}
+header .container nav a {
+  color: hsl(0deg, 53%, 15%);
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+header .container nav a:hover {
+  color: hsl(0deg, 100%, 57%);
+}
+header .container nav a:nth-child(1) {
+  border-bottom: 0.18rem solid hsl(0deg, 100%, 57%);
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    height: 7rem;
+  }
+  header .container {
+    height: 7rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 420px) {
+  header {
+    height: 6rem;
+  }
+  header .container {
+    height: 6rem;
+  }
+  header .container img {
+    min-width: 7rem;
+    height: 2.5rem;
+  }
+  header .container nav {
+    width: 11rem;
+    justify-content: space-between;
+  }
+  header .container nav a {
+    font-size: 0.85rem;
+  }
+}/*# sourceMappingURL=Header.css.map */
